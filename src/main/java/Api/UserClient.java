@@ -33,7 +33,7 @@ public class UserClient {
 
     @Step("Delete user")
     public ValidatableResponse deleteUser(String accessToken) {
-        return given().log().all()
+        return given()
                 .header("Authorization", accessToken)
                 .spec(getBaseSpec())
                 .when()
